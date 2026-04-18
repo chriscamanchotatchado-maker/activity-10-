@@ -15,8 +15,6 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{scroll-behavior:smooth;}
-
 body{
 background:linear-gradient(to bottom,#fff0f5,#ffe4ec);
 }
@@ -25,122 +23,48 @@ background:linear-gradient(to bottom,#fff0f5,#ffe4ec);
 nav{
 position:fixed;
 width:100%;
-background:#ffb6c1;
+background:#ff69b4;
+color:white;
+text-align:center;
+padding:15px;
+font-size:20px;
 z-index:1000;
 }
 
-.menu{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 25px;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:20px;
-}
-
-nav ul li{
-cursor:pointer;
-padding:6px 12px;
-border-radius:20px;
-transition:0.3s;
-}
-
-nav ul li:hover{
-background:#ff69b4;
-color:white;
-}
-
-.menu-btn{
-display:none;
-font-size:25px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-nav ul{
-display:none;
-flex-direction:column;
-position:absolute;
-top:60px;
-left:0;
-width:100%;
-background:#ff69b4;
-text-align:center;
-}
-
-nav ul.show{display:flex;}
-.menu-btn{display:block;}
-}
-
-/* HERO */
-.hero{
-height:100vh;
-background:url('island.jpg') center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-position:relative;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(255,105,180,0.6);
-}
-
-.hero-content{
-position:relative;
-z-index:1;
-}
-
-/* SECTIONS */
+/* SECTION */
 section{
-padding:80px 20px;
-max-width:1100px;
+padding:90px 20px;
+max-width:1000px;
 margin:auto;
 }
 
 .card{
-background:rgba(255,255,255,0.9);
+background:white;
 border-radius:20px;
-padding:30px;
-margin-top:20px;
-box-shadow:0 10px 25px rgba(255,105,180,0.2);
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* GALLERY */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px;
 }
 
 .gallery img{
 width:100%;
-height:220px;
+height:150px;
 object-fit:cover;
-border-radius:15px;
+border-radius:10px;
 }
 
-/* BUTTON */
-.btn{
-display:inline-block;
+/* ABOUT IMAGE */
+.about-img{
+width:100%;
+border-radius:15px;
 margin-top:15px;
-padding:10px 20px;
-background:#ff69b4;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
-text-decoration:none;
 }
 
 /* FOOTER */
@@ -149,85 +73,56 @@ text-align:center;
 padding:20px;
 background:#ff69b4;
 color:white;
-margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<div class="menu">
-<h2>Ipil 💗</h2>
-<span class="menu-btn" onclick="toggleMenu()">☰</span>
-<ul id="navLinks">
-<li onclick="go('home')">Home</li>
-<li onclick="go('about')">About</li>
-<li onclick="go('gallery')">Gallery</li>
-<li onclick="go('contact')">Contact</li>
-</ul>
-</div>
-</nav>
+<nav>Ipil 💗 Tourism</nav>
 
-<section class="hero" id="home">
-<div class="hero-content">
-<h1>Welcome to Ipil 💗</h1>
-<p>The Capital of Zamboanga Sibugay</p>
-<a href="#about" class="btn">Explore</a>
-</div>
-</section>
+<section>
 
-<section id="about">
 <div class="card">
 <h2>About Ipil</h2>
 <p>
-Ipil is the capital of Zamboanga Sibugay. It is known for its peaceful environment, growing economy, and beautiful tourist spots like islands, farms, and waterfalls.
+Ipil is the capital of Zamboanga Sibugay in the Philippines. 
+It is known for its peaceful community, beautiful nature, 
+and growing economy. Visitors enjoy beaches, farms, waterfalls, and friendly people.
 </p>
-</div>
-</section>
 
-<section id="gallery">
+<img class="about-img" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Zamboanga_Sibugay_Capitol.jpg">
+</div>
+
 <div class="card">
 <h2>Gallery</h2>
 
 <div class="gallery">
 
-<img src="waterfall.jpg" alt="Waterfall">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Tinuy-an_Falls.jpg" alt="Tagbilat Falls">
 
-<img src="ipil-town.jpg" alt="Ipil Town">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Buluan Island">
 
-<img src="sibugay-banner.jpg" alt="Sibugay Banner">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Ipil_Rotonda.jpg" alt="Ipil Rotonda">
 
-<img src="island.jpg" alt="Island">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Zamboanga_Sibugay_Capitol.jpg" alt="Capitol Building">
+
+</div>
 
 </div>
 
-</div>
-</section>
-
-<section id="contact">
 <div class="card">
 <h2>Contact</h2>
 <p>Email: ipil@tourism.ph</p>
-<p>Phone: +63 912 345 6789</p>
-<button class="btn" onclick="alert('Message sent 💗')">Send Message</button>
+<p>Phone: +63 900 123 4567</p>
+<p>Location: Ipil, Zamboanga Sibugay, Philippines</p>
 </div>
+
 </section>
 
 <footer>
-<p>© 2026 Ipil Tourism 💗</p>
+© 2026 Ipil Tourism 💗
 </footer>
-
-<script>
-function go(id){
-document.getElementById(id).scrollIntoView({behavior:"smooth"});
-document.getElementById("navLinks").classList.remove("show");
-}
-
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("show");
-}
-</script>
 
 </body>
 </html>
