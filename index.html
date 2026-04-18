@@ -15,8 +15,6 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{scroll-behavior:smooth;}
-
 body{
 background:linear-gradient(to bottom,#fff0f5,#ffe4ec);
 }
@@ -46,12 +44,6 @@ nav ul li{
 cursor:pointer;
 padding:6px 12px;
 border-radius:20px;
-transition:0.3s;
-}
-
-nav ul li:hover{
-background:#ff69b4;
-color:white;
 }
 
 .menu-btn{
@@ -71,38 +63,26 @@ width:100%;
 background:#ff69b4;
 text-align:center;
 }
-
 nav ul.show{display:flex;}
-
 .menu-btn{display:block;}
 }
 
 /* HERO */
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+background:url('island.jpg') center/cover;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
-position:relative;
 }
 
-.hero::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(255,105,180,0.6);
+.hero h1{
+font-size:40px;
 }
 
-.hero-content{
-position:relative;
-z-index:1;
-}
-
-/* SECTIONS */
+/* SECTION */
 section{
 padding:80px 20px;
 max-width:1100px;
@@ -110,11 +90,10 @@ margin:auto;
 }
 
 .card{
-background:rgba(255,255,255,0.9);
+background:white;
 border-radius:20px;
-padding:30px;
+padding:20px;
 margin-top:20px;
-box-shadow:0 10px 25px rgba(255,105,180,0.2);
 }
 
 /* GALLERY */
@@ -126,23 +105,9 @@ gap:15px;
 
 .gallery img{
 width:100%;
-height:220px;
+height:250px;
 object-fit:cover;
 border-radius:15px;
-display:block;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
-background:#ff69b4;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
-text-decoration:none;
 }
 
 /* FOOTER */
@@ -164,26 +129,13 @@ margin-top:40px;
 <span class="menu-btn" onclick="toggleMenu()">☰</span>
 <ul id="navLinks">
 <li onclick="go('home')">Home</li>
-<li onclick="go('about')">About</li>
 <li onclick="go('gallery')">Gallery</li>
-<li onclick="go('contact')">Contact</li>
 </ul>
 </div>
 </nav>
 
 <section class="hero" id="home">
-<div class="hero-content">
 <h1>Welcome to Ipil 💗</h1>
-<p>The Capital of Zamboanga Sibugay</p>
-<a href="#about" class="btn">Explore</a>
-</div>
-</section>
-
-<section id="about">
-<div class="card">
-<h2>About Ipil</h2>
-<p>Ipil is a growing municipality and the capital of Zamboanga Sibugay, known for its peaceful environment and welcoming people.</p>
-</div>
 </section>
 
 <section id="gallery">
@@ -192,31 +144,18 @@ margin-top:40px;
 
 <div class="gallery">
 
-<!-- ISLAND -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Tropical_island_beach.jpg">
+<img src="island.jpg" alt="Island">
 
-<!-- STANCHILL FARMS STYLE -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Philippines_landscape_view.jpg">
+<img src="stanchill.jpg" alt="Stanchill Farms">
 
-<!-- WATERFALL -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Waterfall_in_jungle.jpg">
+<img src="waterfall.jpg" alt="Waterfall">
 
-<!-- CAPITOL -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Provincial_capitol_building.jpg">
+<img src="ipil.jpg" alt="Ipil Town">
 
-<!-- CITY -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Philippines_city_view.jpg">
+<img src="sibugay.jpg" alt="Sibugay Banner">
 
 </div>
 
-</div>
-</section>
-
-<section id="contact">
-<div class="card">
-<h2>Contact</h2>
-<p>Email: ipil@tourism.ph</p>
-<button class="btn" onclick="alert('Message sent 💗')">Send Message</button>
 </div>
 </section>
 
