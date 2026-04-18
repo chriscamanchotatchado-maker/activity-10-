@@ -3,21 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ipil, Zamboanga Sibugay</title>
+<title>Ipil Tourism</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior:smooth; }
 
 body {
     background: linear-gradient(to bottom, #fff0f5, #ffe4ec);
@@ -26,152 +24,138 @@ body {
 /* NAV */
 nav {
     position: fixed;
-    width: 100%;
+    width:100%;
     background: rgba(255,105,180,0.3);
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index:1000;
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 25px;
-    align-items: center;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 25px;
+    align-items:center;
 }
 
 nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+    display:flex;
+    list-style:none;
+    gap:20px;
 }
 
 nav ul li {
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 20px;
-    transition: 0.3s;
+    cursor:pointer;
+    padding:6px 12px;
+    border-radius:20px;
+    transition:0.3s;
 }
 
-nav ul li.active,
-nav ul li:hover {
-    background: #ff69b4;
-    color: white;
+nav ul li:hover,
+nav ul li.active {
+    background:#ff69b4;
+    color:white;
 }
 
 .menu-btn {
-    display: none;
-    font-size: 25px;
+    display:none;
+    font-size:25px;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media(max-width:768px){
     nav ul {
-        display: none;
-        flex-direction: column;
-        background: rgba(255,105,180,0.95);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        background:#ff69b4;
+        text-align:center;
     }
 
-    nav ul.show {
-        display: flex;
-    }
+    nav ul.show { display:flex; }
 
-    .menu-btn {
-        display: block;
-    }
+    .menu-btn { display:block; }
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
+    height:100vh;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Ipil_Poblacion_overlooking_%28Ipil%2C_Zamboanga_Sibugay%3B_10-13-2023%29.jpg') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
 }
 
 .hero::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,105,180,0.6);
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(255,105,180,0.6);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3rem;
+    position:relative;
+    z-index:1;
 }
 
 /* SECTIONS */
 section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
 .card {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 30px;
-    margin-top: 30px;
-    box-shadow: 0 10px 25px rgba(255,105,180,0.2);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.6s;
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    margin-top:20px;
+    box-shadow:0 10px 25px rgba(255,105,180,0.2);
 }
 
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
+/* GALLERY */
+.gallery {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
 }
 
-h2 {
-    color: #ff4d94;
+.gallery img {
+    width:100%;
+    border-radius:15px;
+    transition:0.3s;
 }
 
-/* FORM */
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: none;
+.gallery img:hover {
+    transform:scale(1.05);
 }
 
-form button {
-    margin-top: 10px;
-    padding: 10px;
-    background: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.success {
-    color: green;
-    margin-top: 10px;
+/* BUTTON */
+.btn {
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#ff69b4;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    text-decoration:none;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #ff69b4;
-    color: white;
+    text-align:center;
+    padding:20px;
+    background:#ff69b4;
+    color:white;
 }
 
 </style>
@@ -180,120 +164,68 @@ footer {
 <body>
 
 <nav>
-    <div class="menu">
-        <h2>Ipil 💗</h2>
-        <span class="menu-btn" onclick="toggleMenu()">☰</span>
-        <ul id="navLinks">
-            <li onclick="go('home')">Home</li>
-            <li onclick="go('about')">About</li>
-            <li onclick="go('tourist')">Spots</li>
-            <li onclick="go('culture')">Culture</li>
-            <li onclick="go('contact')">Contact</li>
-        </ul>
-    </div>
+<div class="menu">
+<h2>Ipil 💗</h2>
+<span class="menu-btn" onclick="toggleMenu()">☰</span>
+<ul id="navLinks">
+<li onclick="go('home')">Home</li>
+<li onclick="go('about')">About</li>
+<li onclick="go('gallery')">Gallery</li>
+<li onclick="go('contact')">Contact</li>
+</ul>
+</div>
 </nav>
 
 <section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Welcome to Ipil 💗</h1>
-        <p>The Capital of Zamboanga Sibugay</p>
-    </div>
+<div class="hero-content">
+<h1>Welcome to Ipil 💗</h1>
+<p>The Capital of Zamboanga Sibugay</p>
+<a href="#about" class="btn">Explore</a>
+</div>
 </section>
 
 <section id="about">
-    <div class="card">
-        <h2>About</h2>
-        <p>Ipil is a peaceful and progressive municipality with rich culture and friendly people.</p>
-    </div>
+<div class="card">
+<h2>About Ipil</h2>
+<p>Ipil is a first-class municipality and the capital of Zamboanga Sibugay, known as the crossroads of Region IX and a growing center of culture and economy.</p>
+</div>
 </section>
 
-<section id="tourist">
-    <div class="card">
-        <h2>Tourist Spots</h2>
-        <ul>
-            <li>Capitol Park</li>
-            <li>Beaches</li>
-            <li>Ipil River</li>
-        </ul>
-    </div>
-</section>
+<section id="gallery">
+<div class="card">
+<h2>Gallery</h2>
 
-<section id="culture">
-    <div class="card">
-        <h2>Culture</h2>
-        <p>Festivals and traditions reflect the vibrant community spirit of Ipil.</p>
-    </div>
+<div class="gallery">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Ipil_Poblacion_overlooking_%28Ipil%2C_Zamboanga_Sibugay%3B_10-13-2023%29.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Provincial_capitol_ipil_heights_ipil_zamboanga_sibugay.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/IPIL%2C_Zamboanga_View_from_Hotel_Sibugay_-_Flickr.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Universidad_de_zamboanga_ipil_of_poblacion_ipil_sibugay_zamboanga.jpg">
+</div>
+
+</div>
 </section>
 
 <section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <form onsubmit="submitForm(event)">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send 💌</button>
-            <p class="success" id="msg"></p>
-        </form>
-    </div>
+<div class="card">
+<h2>Contact</h2>
+<p>Email: ipil@tourism.ph</p>
+<button class="btn" onclick="alert('Message sent 💗')">Send Message</button>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Ipil Tourism 💗</p>
+<p>© 2026 Ipil Tourism 💗</p>
 </footer>
 
 <script>
-
-/* NAVIGATION */
-function go(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    document.getElementById("navLinks").classList.remove("show");
+function go(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+document.getElementById("navLinks").classList.remove("show");
 }
 
-/* MOBILE MENU */
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("show");
 }
-
-/* ACTIVE NAV */
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll("nav ul li");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(sec => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 150;
-        const height = sec.offsetHeight;
-
-        if (top >= offset && top < offset + height) {
-            current = sec.getAttribute("id");
-        }
-    });
-
-    navItems.forEach(li => {
-        li.classList.remove("active");
-        if (li.textContent.toLowerCase().includes(current)) {
-            li.classList.add("active");
-        }
-    });
-
-    /* SCROLL ANIMATION */
-    document.querySelectorAll(".card").forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-            card.classList.add("show");
-        }
-    });
-});
-
-/* FORM */
-function submitForm(e) {
-    e.preventDefault();
-    document.getElementById("msg").innerText = "Message sent successfully 💗";
-}
-
 </script>
 
 </body>
