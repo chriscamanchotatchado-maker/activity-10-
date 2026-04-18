@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ipil, Zamboanga Sibugay</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    background: #2c7a7b;
+    color: white;
+    padding: 10px;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #2c7a7b;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* SECTIONS */
+section {
+    padding: 40px;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/800x400') no-repeat center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="menu">
+        <h2>Ipil</h2>
+        <span class="menu-btn" onclick="toggleMenu()">☰</span>
+        <ul id="navLinks">
+            <li>Home</li>
+            <li>About</li>
+            <li>Tourist Spots</li>
+            <li>Culture</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Welcome to Ipil</h1>
+    <p>The Capital of Zamboanga Sibugay</p>
+</section>
+
+<section>
+    <h2>About Ipil</h2>
+    <p>Ipil is a growing municipality and the capital of Zamboanga Sibugay. It is known for its friendly people, rich culture, and developing economy.</p>
+</section>
+
+<section>
+    <h2>Tourist Spots</h2>
+    <ul>
+        <li>Capitol Park</li>
+        <li>Local Beaches</li>
+        <li>Ipil River</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Culture & Festivals</h2>
+    <p>Ipil celebrates local traditions and festivals showcasing its vibrant culture and community spirit.</p>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: ipil@tourism.ph</p>
+</section>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
